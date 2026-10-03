@@ -1,0 +1,446 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Official legal information for Wallpix Gallery by DevDrey Studios.">
+    <meta name="theme-color" content="#000000">
+    <title>Wallpix Gallery | Legal</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+                Helvetica, Arial, sans-serif;
+            background: #000000;
+            color: #ffffff;
+            line-height: 1.6;
+            min-height: 100vh;
+        }
+
+        a {
+            color: inherit;
+            text-decoration: none;
+        }
+
+        .page {
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+        }
+
+        header {
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            background: rgba(0, 0, 0, 0.82);
+            backdrop-filter: blur(18px);
+            -webkit-backdrop-filter: blur(18px);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.07);
+        }
+
+        .nav {
+            max-width: 1100px;
+            margin: auto;
+            padding: 18px 24px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 20px;
+        }
+
+        .brand {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .brand-icon {
+            width: 42px;
+            height: 42px;
+            border-radius: 12px;
+            background: linear-gradient(135deg, #2979ff, #1554c7);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 800;
+            font-size: 18px;
+            box-shadow: 0 8px 30px rgba(41, 121, 255, 0.25);
+        }
+
+        .brand-text strong {
+            display: block;
+            font-size: 15px;
+            letter-spacing: -0.2px;
+        }
+
+        .brand-text span {
+            display: block;
+            font-size: 11px;
+            color: #777d89;
+            margin-top: 1px;
+        }
+
+        .nav-link {
+            color: #aeb4bf;
+            font-size: 14px;
+            transition: 0.2s ease;
+        }
+
+        .nav-link:hover {
+            color: #ffffff;
+        }
+
+        main {
+            flex: 1;
+        }
+
+        .hero {
+            max-width: 900px;
+            margin: auto;
+            padding: 100px 24px 70px;
+            text-align: center;
+        }
+
+        .badge {
+            display: inline-flex;
+            align-items: center;
+            padding: 7px 13px;
+            border-radius: 999px;
+            background: rgba(41, 121, 255, 0.10);
+            border: 1px solid rgba(41, 121, 255, 0.25);
+            color: #6da2ff;
+            font-size: 12px;
+            font-weight: 600;
+            margin-bottom: 25px;
+        }
+
+        h1 {
+            font-size: clamp(42px, 8vw, 72px);
+            line-height: 1.02;
+            letter-spacing: -3px;
+            margin-bottom: 22px;
+        }
+
+        .gradient {
+            background: linear-gradient(135deg, #ffffff 20%, #5594ff 80%);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+        }
+
+        .hero p {
+            max-width: 650px;
+            margin: auto;
+            color: #8f96a3;
+            font-size: 17px;
+        }
+
+        .cards {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 0 24px 90px;
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 18px;
+        }
+
+        .card {
+            position: relative;
+            padding: 30px;
+            border-radius: 22px;
+            background: linear-gradient(
+                145deg,
+                rgba(18, 20, 25, 0.95),
+                rgba(8, 9, 12, 0.95)
+            );
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            transition: transform 0.25s ease, border-color 0.25s ease;
+            overflow: hidden;
+        }
+
+        .card::before {
+            content: "";
+            position: absolute;
+            width: 180px;
+            height: 180px;
+            right: -90px;
+            top: -90px;
+            background: rgba(41, 121, 255, 0.10);
+            border-radius: 50%;
+            filter: blur(10px);
+        }
+
+        .card:hover {
+            transform: translateY(-4px);
+            border-color: rgba(41, 121, 255, 0.35);
+        }
+
+        .card-icon {
+            width: 48px;
+            height: 48px;
+            border-radius: 14px;
+            background: rgba(41, 121, 255, 0.12);
+            border: 1px solid rgba(41, 121, 255, 0.20);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #5b9aff;
+            font-weight: 700;
+            font-size: 13px;
+            margin-bottom: 22px;
+        }
+
+        .card h2 {
+            font-size: 21px;
+            margin-bottom: 9px;
+            letter-spacing: -0.5px;
+        }
+
+        .card p {
+            color: #858b97;
+            font-size: 14px;
+            margin-bottom: 22px;
+        }
+
+        .card-link {
+            display: inline-flex;
+            align-items: center;
+            color: #5b9aff;
+            font-size: 14px;
+            font-weight: 600;
+        }
+
+        .card-link span {
+            margin-left: 7px;
+            transition: transform 0.2s ease;
+        }
+
+        .card:hover .card-link span {
+            transform: translateX(4px);
+        }
+
+        .contact {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 0 24px 80px;
+        }
+
+        .contact-box {
+            border-radius: 20px;
+            padding: 30px;
+            text-align: center;
+            background: #090a0d;
+            border: 1px solid rgba(255, 255, 255, 0.07);
+        }
+
+        .contact-box h2 {
+            font-size: 20px;
+            margin-bottom: 8px;
+        }
+
+        .contact-box p {
+            color: #858b97;
+            font-size: 14px;
+            margin-bottom: 15px;
+        }
+
+        .contact-box a {
+            color: #5b9aff;
+            font-size: 14px;
+            font-weight: 600;
+        }
+
+        footer {
+            border-top: 1px solid rgba(255, 255, 255, 0.07);
+            padding: 30px 24px;
+        }
+
+        .footer-inner {
+            max-width: 1100px;
+            margin: auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 20px;
+        }
+
+        .footer-brand {
+            font-size: 14px;
+            font-weight: 600;
+        }
+
+        .footer-brand span {
+            display: block;
+            color: #666c77;
+            font-size: 11px;
+            font-weight: 400;
+            margin-top: 3px;
+        }
+
+        .footer-links {
+            display: flex;
+            gap: 20px;
+        }
+
+        .footer-links a {
+            color: #737984;
+            font-size: 12px;
+            transition: color 0.2s ease;
+        }
+
+        .footer-links a:hover {
+            color: #ffffff;
+        }
+
+        @media (max-width: 650px) {
+            .nav {
+                padding: 15px 18px;
+            }
+
+            .nav-link {
+                display: none;
+            }
+
+            .hero {
+                padding: 75px 20px 55px;
+            }
+
+            h1 {
+                letter-spacing: -2px;
+            }
+
+            .hero p {
+                font-size: 15px;
+            }
+
+            .cards {
+                grid-template-columns: 1fr;
+                padding: 0 18px 60px;
+            }
+
+            .contact {
+                padding: 0 18px 60px;
+            }
+
+            .footer-inner {
+                flex-direction: column;
+                text-align: center;
+            }
+        }
+    </style>
+</head>
+
+<body>
+<div class="page">
+
+    <header>
+        <nav class="nav">
+            <a href="index.html" class="brand">
+                <div class="brand-icon">W</div>
+
+                <div class="brand-text">
+                    <strong>Wallpix Gallery</strong>
+                    <span>DevDrey Studios</span>
+                </div>
+            </a>
+
+            <a href="privacy.html" class="nav-link">Privacy Policy</a>
+        </nav>
+    </header>
+
+    <main>
+
+        <section class="hero">
+            <div class="badge">Official Legal Information</div>
+
+            <h1>
+                Wallpix Gallery<br>
+                <span class="gradient">Legal Center</span>
+            </h1>
+
+            <p>
+                Official privacy and service information for Wallpix Gallery,
+                developed and operated by DevDrey Studios.
+            </p>
+        </section>
+
+        <section class="cards">
+
+            <a href="privacy.html" class="card">
+                <div class="card-icon">01</div>
+
+                <h2>Privacy Policy</h2>
+
+                <p>
+                    Learn how Wallpix Gallery handles account information,
+                    advertising, authentication, data, and third-party services.
+                </p>
+
+                <div class="card-link">
+                    Read Privacy Policy <span>→</span>
+                </div>
+            </a>
+
+            <a href="terms.html" class="card">
+                <div class="card-icon">02</div>
+
+                <h2>Terms of Service</h2>
+
+                <p>
+                    Review the terms governing your use of Wallpix Gallery,
+                    wallpaper content, accounts, advertising, and the service.
+                </p>
+
+                <div class="card-link">
+                    Read Terms of Service <span>→</span>
+                </div>
+            </a>
+
+        </section>
+
+        <section class="contact">
+            <div class="contact-box">
+                <h2>Contact DevDrey Studios</h2>
+
+                <p>
+                    For questions regarding Wallpix Gallery or these legal documents,
+                    contact us by email.
+                </p>
+
+                <a href="mailto:viralbit.zw@gmail.com">
+                    viralbit.zw@gmail.com
+                </a>
+            </div>
+        </section>
+
+    </main>
+
+    <footer>
+        <div class="footer-inner">
+
+            <div class="footer-brand">
+                Wallpix Gallery
+                <span>Developed by DevDrey Studios</span>
+            </div>
+
+            <div class="footer-links">
+                <a href="privacy.html">Privacy Policy</a>
+                <a href="terms.html">Terms of Service</a>
+            </div>
+
+        </div>
+    </footer>
+
+</div>
+</body>
+</html>

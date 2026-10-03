@@ -1,0 +1,599 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Privacy Policy for Wallpix Gallery by DevDrey Studios.">
+    <meta name="theme-color" content="#000000">
+    <title>Wallpix Gallery | Privacy Policy</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+                Helvetica, Arial, sans-serif;
+            background: #000000;
+            color: #ffffff;
+            line-height: 1.7;
+        }
+
+        a {
+            color: inherit;
+            text-decoration: none;
+        }
+
+        header {
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            background: rgba(0, 0, 0, 0.85);
+            backdrop-filter: blur(18px);
+            -webkit-backdrop-filter: blur(18px);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.07);
+        }
+
+        .nav {
+            max-width: 1050px;
+            margin: auto;
+            padding: 17px 24px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .brand {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .brand-icon {
+            width: 40px;
+            height: 40px;
+            border-radius: 11px;
+            background: linear-gradient(135deg, #2979ff, #1554c7);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 800;
+            box-shadow: 0 8px 25px rgba(41, 121, 255, 0.22);
+        }
+
+        .brand-name {
+            font-weight: 700;
+            font-size: 14px;
+        }
+
+        .brand-company {
+            display: block;
+            color: #707681;
+            font-size: 10px;
+            margin-top: 1px;
+        }
+
+        .back {
+            color: #858b96;
+            font-size: 13px;
+            transition: color 0.2s ease;
+        }
+
+        .back:hover {
+            color: #ffffff;
+        }
+
+        .container {
+            max-width: 850px;
+            margin: auto;
+            padding: 75px 24px 90px;
+        }
+
+        .hero {
+            text-align: center;
+            margin-bottom: 55px;
+        }
+
+        .document-icon {
+            width: 58px;
+            height: 58px;
+            margin: 0 auto 20px;
+            border-radius: 17px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: rgba(41, 121, 255, 0.12);
+            border: 1px solid rgba(41, 121, 255, 0.25);
+            color: #6da2ff;
+            font-size: 13px;
+            font-weight: 700;
+        }
+
+        .hero h1 {
+            font-size: clamp(36px, 7vw, 54px);
+            line-height: 1.05;
+            letter-spacing: -2px;
+            margin-bottom: 14px;
+        }
+
+        .hero p {
+            color: #737984;
+            font-size: 13px;
+        }
+
+        .intro {
+            padding: 22px 24px;
+            margin-bottom: 40px;
+            border-left: 3px solid #2979ff;
+            border-radius: 0 12px 12px 0;
+            background: rgba(41, 121, 255, 0.06);
+            color: #a3a9b4;
+            font-size: 14px;
+        }
+
+        .section {
+            margin-bottom: 42px;
+        }
+
+        .section-number {
+            color: #4d91ff;
+            font-size: 11px;
+            font-weight: 700;
+            letter-spacing: 1px;
+            margin-bottom: 7px;
+            text-transform: uppercase;
+        }
+
+        h2 {
+            font-size: 22px;
+            letter-spacing: -0.5px;
+            margin-bottom: 13px;
+        }
+
+        p {
+            color: #9197a2;
+            font-size: 14px;
+            margin-bottom: 13px;
+        }
+
+        ul {
+            padding-left: 20px;
+            margin: 12px 0;
+        }
+
+        li {
+            color: #9197a2;
+            font-size: 14px;
+            margin-bottom: 8px;
+            padding-left: 4px;
+        }
+
+        strong {
+            color: #dce0e7;
+            font-weight: 600;
+        }
+
+        .highlight {
+            padding: 20px 22px;
+            border-radius: 14px;
+            background: #0a0b0e;
+            border: 1px solid rgba(255, 255, 255, 0.07);
+            margin-top: 16px;
+        }
+
+        .contact {
+            margin-top: 55px;
+            padding: 28px;
+            border-radius: 18px;
+            background: linear-gradient(
+                145deg,
+                rgba(41, 121, 255, 0.11),
+                rgba(10, 11, 14, 0.9)
+            );
+            border: 1px solid rgba(41, 121, 255, 0.18);
+            text-align: center;
+        }
+
+        .contact h2 {
+            margin-bottom: 8px;
+        }
+
+        .contact p {
+            margin-bottom: 12px;
+        }
+
+        .contact a {
+            color: #5b9aff;
+            font-size: 14px;
+            font-weight: 600;
+        }
+
+        footer {
+            border-top: 1px solid rgba(255, 255, 255, 0.07);
+            padding: 28px 24px;
+        }
+
+        .footer-inner {
+            max-width: 1050px;
+            margin: auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 20px;
+        }
+
+        .footer-copy {
+            color: #5f6570;
+            font-size: 11px;
+        }
+
+        .footer-links {
+            display: flex;
+            gap: 18px;
+        }
+
+        .footer-links a {
+            color: #777d88;
+            font-size: 11px;
+        }
+
+        .footer-links a:hover {
+            color: #ffffff;
+        }
+
+        @media (max-width: 600px) {
+            .nav {
+                padding: 14px 18px;
+            }
+
+            .back {
+                font-size: 12px;
+            }
+
+            .container {
+                padding: 55px 18px 70px;
+            }
+
+            .section {
+                margin-bottom: 36px;
+            }
+
+            h2 {
+                font-size: 20px;
+            }
+
+            p,
+            li {
+                font-size: 13px;
+            }
+
+            .footer-inner {
+                flex-direction: column;
+                text-align: center;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+<header>
+    <nav class="nav">
+
+        <a href="index.html" class="brand">
+            <div class="brand-icon">W</div>
+
+            <div>
+                <div class="brand-name">Wallpix Gallery</div>
+                <span class="brand-company">DevDrey Studios</span>
+            </div>
+        </a>
+
+        <a href="index.html" class="back">Back to Legal Center</a>
+
+    </nav>
+</header>
+
+<main class="container">
+
+    <section class="hero">
+        <div class="document-icon">01</div>
+
+        <h1>Privacy Policy</h1>
+
+        <p>Last updated: October 2026</p>
+    </section>
+
+    <div class="intro">
+        This Privacy Policy explains how Wallpix Gallery, developed by
+        DevDrey Studios, handles information when you use the application.
+        We aim to keep your information secure and use it only as necessary
+        to provide and improve the service.
+    </div>
+
+    <section class="section">
+        <div class="section-number">Section 01</div>
+        <h2>Information We Collect</h2>
+
+        <p>
+            Wallpix Gallery may collect limited information necessary to
+            provide account functionality and operate the application.
+        </p>
+
+        <p>
+            Depending on how you use the application, this may include:
+        </p>
+
+        <ul>
+            <li>Email address associated with your account.</li>
+            <li>Display name associated with your account.</li>
+            <li>Authentication information required to sign you in.</li>
+            <li>Information necessary to maintain your application account.</li>
+        </ul>
+
+        <p>
+            If you use Google Sign-In, authentication may be handled through
+            Google's authentication services.
+        </p>
+    </section>
+
+    <section class="section">
+        <div class="section-number">Section 02</div>
+        <h2>How We Use Information</h2>
+
+        <p>
+            Information collected by Wallpix Gallery may be used to:
+        </p>
+
+        <ul>
+            <li>Create and maintain your account.</li>
+            <li>Authenticate you when you sign in.</li>
+            <li>Provide application features and services.</li>
+            <li>Maintain and improve the application.</li>
+            <li>Respond to support requests.</li>
+            <li>Protect the application against misuse or abuse.</li>
+        </ul>
+    </section>
+
+    <section class="section">
+        <div class="section-number">Section 03</div>
+        <h2>Authentication and Firebase</h2>
+
+        <p>
+            Wallpix Gallery uses Firebase Authentication to support account
+            registration and sign-in.
+        </p>
+
+        <p>
+            Depending on the available sign-in options, users may authenticate
+            using email and password or Google Sign-In.
+        </p>
+
+        <p>
+            Account-related information may be stored and processed using
+            Google Firebase and Google Cloud services.
+        </p>
+    </section>
+
+    <section class="section">
+        <div class="section-number">Section 04</div>
+        <h2>Cloud Storage and Wallpaper Delivery</h2>
+
+        <p>
+            Wallpaper images and related application content may be stored,
+            cached, or delivered through third-party infrastructure used by
+            Wallpix Gallery.
+        </p>
+
+        <p>
+            These services are used to provide reliable and efficient access
+            to wallpaper content.
+        </p>
+    </section>
+
+    <section class="section">
+        <div class="section-number">Section 05</div>
+        <h2>Advertising</h2>
+
+        <p>
+            Wallpix Gallery displays advertisements using Google AdMob.
+        </p>
+
+        <p>
+            Depending on the application experience, advertisements may
+            include native advertisements, app open advertisements, and
+            rewarded video advertisements.
+        </p>
+
+        <p>
+            Google and its advertising partners may process information such
+            as device information, advertising identifiers, approximate
+            location, and interactions with advertisements in accordance with
+            their own policies and applicable settings.
+        </p>
+
+        <div class="highlight">
+            <p>
+                <strong>Important:</strong> Wallpix Gallery does not sell your
+                personal information directly to third parties.
+            </p>
+        </div>
+    </section>
+
+    <section class="section">
+        <div class="section-number">Section 06</div>
+        <h2>Notifications</h2>
+
+        <p>
+            If notification functionality is enabled, Wallpix Gallery may
+            use notification services to send application-related messages,
+            updates, or other relevant information.
+        </p>
+
+        <p>
+            You can manage notification permissions through your device
+            settings where supported.
+        </p>
+    </section>
+
+    <section class="section">
+        <div class="section-number">Section 07</div>
+        <h2>Children and General Audience</h2>
+
+        <p>
+            Wallpix Gallery is designed as a general-audience application and
+            is not intentionally designed to collect personal information
+            from children.
+        </p>
+
+        <p>
+            We encourage parents and guardians to supervise children's use of
+            internet-connected applications and services.
+        </p>
+
+        <p>
+            Advertising and other third-party services used by the application
+            may have their own age-related requirements and privacy controls.
+        </p>
+    </section>
+
+    <section class="section">
+        <div class="section-number">Section 08</div>
+        <h2>Third-Party Services</h2>
+
+        <p>
+            Wallpix Gallery relies on certain third-party services to provide
+            application functionality.
+        </p>
+
+        <p>These may include:</p>
+
+        <ul>
+            <li>Google Firebase Authentication.</li>
+            <li>Google Cloud services.</li>
+            <li>Google AdMob.</li>
+            <li>Google Sign-In.</li>
+            <li>Other infrastructure providers required to deliver application content.</li>
+        </ul>
+
+        <p>
+            These third parties may process information according to their own
+            privacy policies and terms.
+        </p>
+    </section>
+
+    <section class="section">
+        <div class="section-number">Section 09</div>
+        <h2>Data Security</h2>
+
+        <p>
+            We take reasonable measures to protect information associated with
+            Wallpix Gallery accounts and services.
+        </p>
+
+        <p>
+            However, no internet transmission or electronic storage system can
+            be guaranteed to be completely secure.
+        </p>
+    </section>
+
+    <section class="section">
+        <div class="section-number">Section 10</div>
+        <h2>Data Retention</h2>
+
+        <p>
+            Account information may be retained for as long as necessary to
+            maintain your account and provide the application service.
+        </p>
+
+        <p>
+            Information may also be retained where necessary for security,
+            legal, technical, or operational purposes.
+        </p>
+
+        <p>
+            Wallpix Gallery currently does not provide an in-app account
+            deletion feature.
+        </p>
+    </section>
+
+    <section class="section">
+        <div class="section-number">Section 11</div>
+        <h2>Privacy Choices</h2>
+
+        <p>
+            You may control certain permissions through your device settings,
+            including notification permissions and other applicable
+            application permissions.
+        </p>
+
+        <p>
+            Advertising preferences may also be controlled through Google's
+            available advertising and privacy settings.
+        </p>
+    </section>
+
+    <section class="section">
+        <div class="section-number">Section 12</div>
+        <h2>Changes to This Privacy Policy</h2>
+
+        <p>
+            We may update this Privacy Policy from time to time to reflect
+            changes to Wallpix Gallery, our services, or applicable
+            requirements.
+        </p>
+
+        <p>
+            When changes are made, the updated policy will be published on
+            this page with a revised "Last updated" date.
+        </p>
+    </section>
+
+    <section class="section">
+        <div class="section-number">Section 13</div>
+        <h2>Contact Us</h2>
+
+        <p>
+            If you have questions about this Privacy Policy or how Wallpix
+            Gallery handles information, you can contact DevDrey Studios.
+        </p>
+    </section>
+
+    <div class="contact">
+        <h2>Contact DevDrey Studios</h2>
+
+        <p>
+            Privacy and support inquiries
+        </p>
+
+        <a href="mailto:viralbit.zw@gmail.com">
+            viralbit.zw@gmail.com
+        </a>
+    </div>
+
+</main>
+
+<footer>
+    <div class="footer-inner">
+
+        <div class="footer-copy">
+            © 2026 DevDrey Studios. All rights reserved.
+        </div>
+
+        <div class="footer-links">
+            <a href="index.html">Legal Center</a>
+            <a href="terms.html">Terms of Service</a>
+        </div>
+
+    </div>
+</footer>
+
+</body>
+</html>
