@@ -1,0 +1,878 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta
+        name="description"
+        content="Request deletion of your Wallpix Gallery account."
+    >
+
+    <meta name="theme-color" content="#000000">
+
+    <title>Wallpix Gallery | Delete Account</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family:
+                -apple-system,
+                BlinkMacSystemFont,
+                "Segoe UI",
+                Roboto,
+                Helvetica,
+                Arial,
+                sans-serif;
+
+            background: #000000;
+            color: #ffffff;
+            line-height: 1.7;
+            min-height: 100vh;
+        }
+
+        a {
+            color: inherit;
+            text-decoration: none;
+        }
+
+        button,
+        input,
+        textarea {
+            font: inherit;
+        }
+
+        header {
+            position: sticky;
+            top: 0;
+            z-index: 100;
+
+            background: rgba(0, 0, 0, 0.86);
+
+            backdrop-filter: blur(18px);
+            -webkit-backdrop-filter: blur(18px);
+
+            border-bottom: 1px solid rgba(255, 255, 255, 0.07);
+        }
+
+        .nav {
+            max-width: 1050px;
+            margin: auto;
+
+            padding: 17px 24px;
+
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+
+            gap: 20px;
+        }
+
+        .brand {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .brand-icon {
+            width: 40px;
+            height: 40px;
+
+            border-radius: 11px;
+
+            background: linear-gradient(
+                135deg,
+                #2979ff,
+                #1554c7
+            );
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            font-weight: 800;
+
+            box-shadow:
+                0 8px 25px rgba(41, 121, 255, 0.22);
+        }
+
+        .brand-name {
+            font-weight: 700;
+            font-size: 14px;
+        }
+
+        .brand-company {
+            display: block;
+
+            color: #707681;
+
+            font-size: 10px;
+
+            margin-top: 1px;
+        }
+
+        .back {
+            color: #858b96;
+            font-size: 13px;
+
+            transition: color 0.2s ease;
+        }
+
+        .back:hover {
+            color: #ffffff;
+        }
+
+        .container {
+            max-width: 760px;
+
+            margin: auto;
+
+            padding: 75px 24px 90px;
+        }
+
+        .hero {
+            text-align: center;
+
+            margin-bottom: 45px;
+        }
+
+        .document-icon {
+            width: 58px;
+            height: 58px;
+
+            margin: 0 auto 20px;
+
+            border-radius: 17px;
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            background: rgba(41, 121, 255, 0.12);
+
+            border: 1px solid rgba(41, 121, 255, 0.25);
+
+            color: #6da2ff;
+
+            font-size: 12px;
+            font-weight: 700;
+        }
+
+        .hero h1 {
+            font-size: clamp(34px, 7vw, 52px);
+
+            line-height: 1.05;
+
+            letter-spacing: -2px;
+
+            margin-bottom: 14px;
+        }
+
+        .hero p {
+            max-width: 590px;
+
+            margin: auto;
+
+            color: #737984;
+
+            font-size: 14px;
+        }
+
+        .notice {
+            padding: 20px 22px;
+
+            margin-bottom: 28px;
+
+            border-left: 3px solid #2979ff;
+
+            border-radius: 0 13px 13px 0;
+
+            background: rgba(41, 121, 255, 0.06);
+
+            color: #9ba2ae;
+
+            font-size: 14px;
+        }
+
+        .card {
+            background:
+                linear-gradient(
+                    145deg,
+                    rgba(18, 20, 25, 0.98),
+                    rgba(8, 9, 12, 0.98)
+                );
+
+            border: 1px solid rgba(255, 255, 255, 0.08);
+
+            border-radius: 20px;
+
+            padding: 30px;
+
+            box-shadow:
+                0 20px 70px rgba(0, 0, 0, 0.35);
+        }
+
+        .card h2 {
+            font-size: 21px;
+
+            letter-spacing: -0.5px;
+
+            margin-bottom: 8px;
+        }
+
+        .card-description {
+            color: #808691;
+
+            font-size: 13px;
+
+            margin-bottom: 27px;
+        }
+
+        .field {
+            margin-bottom: 21px;
+        }
+
+        .field label {
+            display: block;
+
+            color: #d8dce3;
+
+            font-size: 13px;
+
+            font-weight: 600;
+
+            margin-bottom: 8px;
+        }
+
+        .field input,
+        .field textarea {
+            width: 100%;
+
+            padding: 13px 14px;
+
+            border-radius: 11px;
+
+            border: 1px solid rgba(255, 255, 255, 0.10);
+
+            outline: none;
+
+            background: #08090c;
+
+            color: #ffffff;
+
+            font-size: 14px;
+
+            transition:
+                border-color 0.2s ease,
+                box-shadow 0.2s ease;
+        }
+
+        .field input::placeholder,
+        .field textarea::placeholder {
+            color: #555b65;
+        }
+
+        .field input:focus,
+        .field textarea:focus {
+            border-color: rgba(41, 121, 255, 0.75);
+
+            box-shadow:
+                0 0 0 3px rgba(41, 121, 255, 0.10);
+        }
+
+        .field textarea {
+            min-height: 110px;
+
+            resize: vertical;
+        }
+
+        .checkbox-container {
+            display: flex;
+
+            align-items: flex-start;
+
+            gap: 11px;
+
+            margin: 25px 0;
+        }
+
+        .checkbox-container input {
+            width: 17px;
+            height: 17px;
+
+            margin-top: 3px;
+
+            accent-color: #2979ff;
+
+            flex-shrink: 0;
+        }
+
+        .checkbox-container label {
+            color: #858b96;
+
+            font-size: 12px;
+
+            line-height: 1.6;
+
+            cursor: pointer;
+        }
+
+        .checkbox-container a {
+            color: #5b9aff;
+        }
+
+        .submit-button {
+            width: 100%;
+
+            border: none;
+
+            border-radius: 12px;
+
+            padding: 14px 20px;
+
+            background: linear-gradient(
+                135deg,
+                #2979ff,
+                #1554c7
+            );
+
+            color: #ffffff;
+
+            font-size: 14px;
+
+            font-weight: 700;
+
+            cursor: pointer;
+
+            box-shadow:
+                0 10px 30px rgba(41, 121, 255, 0.20);
+
+            transition:
+                transform 0.2s ease,
+                box-shadow 0.2s ease,
+                opacity 0.2s ease;
+        }
+
+        .submit-button:hover {
+            transform: translateY(-2px);
+
+            box-shadow:
+                0 14px 35px rgba(41, 121, 255, 0.30);
+        }
+
+        .submit-button:active {
+            transform: translateY(0);
+        }
+
+        .submit-button:disabled {
+            opacity: 0.55;
+
+            cursor: not-allowed;
+
+            transform: none;
+        }
+
+        .security-note {
+            margin-top: 18px;
+
+            text-align: center;
+
+            color: #555b65;
+
+            font-size: 11px;
+        }
+
+        .info-grid {
+            display: grid;
+
+            grid-template-columns: repeat(2, 1fr);
+
+            gap: 14px;
+
+            margin-top: 22px;
+        }
+
+        .info-box {
+            padding: 19px;
+
+            border-radius: 14px;
+
+            background: #090a0d;
+
+            border: 1px solid rgba(255, 255, 255, 0.07);
+        }
+
+        .info-box h3 {
+            font-size: 13px;
+
+            margin-bottom: 6px;
+        }
+
+        .info-box p {
+            color: #737984;
+
+            font-size: 12px;
+
+            line-height: 1.6;
+        }
+
+        .success {
+            display: none;
+
+            margin-top: 22px;
+
+            padding: 18px 20px;
+
+            border-radius: 13px;
+
+            background: rgba(41, 121, 255, 0.08);
+
+            border: 1px solid rgba(41, 121, 255, 0.20);
+
+            color: #a7c4ff;
+
+            font-size: 13px;
+        }
+
+        .error {
+            display: none;
+
+            margin-top: 22px;
+
+            padding: 18px 20px;
+
+            border-radius: 13px;
+
+            background: rgba(255, 70, 70, 0.07);
+
+            border: 1px solid rgba(255, 70, 70, 0.18);
+
+            color: #ff9b9b;
+
+            font-size: 13px;
+        }
+
+        .contact {
+            text-align: center;
+
+            margin-top: 45px;
+        }
+
+        .contact p {
+            color: #656b76;
+
+            font-size: 12px;
+
+            margin-bottom: 8px;
+        }
+
+        .contact a {
+            color: #5b9aff;
+
+            font-size: 13px;
+
+            font-weight: 600;
+        }
+
+        footer {
+            border-top: 1px solid rgba(255, 255, 255, 0.07);
+
+            padding: 28px 24px;
+        }
+
+        .footer-inner {
+            max-width: 1050px;
+
+            margin: auto;
+
+            display: flex;
+
+            justify-content: space-between;
+
+            align-items: center;
+
+            gap: 20px;
+        }
+
+        .footer-copy {
+            color: #5f6570;
+
+            font-size: 11px;
+        }
+
+        .footer-links {
+            display: flex;
+
+            gap: 18px;
+        }
+
+        .footer-links a {
+            color: #777d88;
+
+            font-size: 11px;
+
+            transition: color 0.2s ease;
+        }
+
+        .footer-links a:hover {
+            color: #ffffff;
+        }
+
+        @media (max-width: 650px) {
+
+            .nav {
+                padding: 14px 18px;
+            }
+
+            .back {
+                font-size: 12px;
+            }
+
+            .container {
+                padding: 55px 18px 70px;
+            }
+
+            .card {
+                padding: 22px;
+            }
+
+            .info-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .footer-inner {
+                flex-direction: column;
+
+                text-align: center;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+<header>
+    <nav class="nav">
+
+        <a href="index.html" class="brand">
+
+            <div class="brand-icon">
+                W
+            </div>
+
+            <div>
+                <div class="brand-name">
+                    Wallpix Gallery
+                </div>
+
+                <span class="brand-company">
+                    DevDrey Studios
+                </span>
+            </div>
+
+        </a>
+
+        <a href="index.html" class="back">
+            Back to Legal Center
+        </a>
+
+    </nav>
+</header>
+
+
+<main class="container">
+
+    <section class="hero">
+
+        <div class="document-icon">
+            DELETE
+        </div>
+
+        <h1>
+            Delete Your Account
+        </h1>
+
+        <p>
+            Submit a request to delete your Wallpix Gallery account
+            and associated account information.
+        </p>
+
+    </section>
+
+
+    <div class="notice">
+
+        <strong>Before continuing:</strong>
+        Account deletion is permanent. Once your request has been
+        processed, your Wallpix Gallery account and eligible associated
+        account data will be deleted and cannot be recovered.
+
+    </div>
+
+
+    <div class="card">
+
+        <h2>
+            Account Deletion Request
+        </h2>
+
+        <p class="card-description">
+            Enter the email address associated with your Wallpix Gallery
+            account. We may use this information to verify and process
+            your request.
+        </p>
+
+
+        <!--
+            IMPORTANT:
+
+            This form currently uses a placeholder action.
+
+            Replace the action URL with your actual secure backend,
+            Netlify Function, Formspree endpoint, or other form
+            processing service before publishing this page as a
+            functional deletion-request system.
+        -->
+
+        <form
+            id="deletionForm"
+            method="POST"
+            action="#"
+        >
+
+            <div class="field">
+
+                <label for="email">
+                    Account Email Address
+                </label>
+
+                <input
+                    type="email"
+                    id="email"
+                    name="email"
+                    placeholder="Enter your account email"
+                    autocomplete="email"
+                    required
+                >
+
+            </div>
+
+
+            <div class="field">
+
+                <label for="reason">
+                    Reason for Deletion
+                    <span style="color:#555b65; font-weight:400;">
+                        (Optional)
+                    </span>
+                </label>
+
+                <textarea
+                    id="reason"
+                    name="reason"
+                    placeholder="Tell us why you would like to delete your account."
+                ></textarea>
+
+            </div>
+
+
+            <div class="checkbox-container">
+
+                <input
+                    type="checkbox"
+                    id="confirmation"
+                    name="confirmation"
+                    required
+                >
+
+                <label for="confirmation">
+
+                    I understand that deleting my Wallpix Gallery account
+                    is permanent and that my account information and other
+                    eligible associated data may be deleted and cannot be
+                    recovered.
+
+                    I have reviewed the
+                    <a href="privacy.html">
+                        Privacy Policy
+                    </a>.
+
+                </label>
+
+            </div>
+
+
+            <button
+                type="submit"
+                class="submit-button"
+                id="submitButton"
+            >
+                Submit Account Deletion Request
+            </button>
+
+
+            <div
+                class="success"
+                id="successMessage"
+            >
+                Your account deletion request has been submitted.
+                We will process the request according to our account
+                deletion procedures.
+            </div>
+
+
+            <div
+                class="error"
+                id="errorMessage"
+            >
+                We could not submit your request. Please try again or
+                contact DevDrey Studios directly using the email address
+                below.
+            </div>
+
+        </form>
+
+
+        <div class="security-note">
+            Only submit a deletion request for an account that belongs to you.
+        </div>
+
+    </div>
+
+
+    <div class="info-grid">
+
+        <div class="info-box">
+
+            <h3>
+                Account Information
+            </h3>
+
+            <p>
+                Your account information and eligible associated data
+                will be deleted when your request is processed.
+            </p>
+
+        </div>
+
+
+        <div class="info-box">
+
+            <h3>
+                Legal Retention
+            </h3>
+
+            <p>
+                Certain information may be retained where required
+                for legal, security, fraud-prevention, or other
+                legitimate purposes.
+            </p>
+
+        </div>
+
+    </div>
+
+
+    <div class="contact">
+
+        <p>
+            Having trouble submitting a request?
+        </p>
+
+        <a href="mailto:viralbit.zw@gmail.com">
+            Contact viralbit.zw@gmail.com
+        </a>
+
+    </div>
+
+</main>
+
+
+<footer>
+
+    <div class="footer-inner">
+
+        <div class="footer-copy">
+            © 2026 DevDrey Studios. All rights reserved.
+        </div>
+
+
+        <div class="footer-links">
+
+            <a href="index.html">
+                Legal Center
+            </a>
+
+            <a href="privacy.html">
+                Privacy Policy
+            </a>
+
+            <a href="terms.html">
+                Terms of Service
+            </a>
+
+        </div>
+
+    </div>
+
+</footer>
+
+
+<script>
+
+    const form = document.getElementById("deletionForm");
+
+    const submitButton =
+        document.getElementById("submitButton");
+
+    const successMessage =
+        document.getElementById("successMessage");
+
+    const errorMessage =
+        document.getElementById("errorMessage");
+
+
+    form.addEventListener("submit", function(event) {
+
+        /*
+         * The current form action is "#", so this prevents
+         * the browser from navigating away.
+         *
+         * Replace this with your real backend/form endpoint
+         * before using this as a live account-deletion system.
+         */
+
+        if (form.getAttribute("action") === "#") {
+
+            event.preventDefault();
+
+            errorMessage.style.display = "block";
+
+            errorMessage.textContent =
+                "The deletion request system has not been connected yet. " +
+                "Please contact DevDrey Studios at viralbit.zw@gmail.com.";
+
+            return;
+        }
+
+
+        submitButton.disabled = true;
+
+        submitButton.textContent =
+            "Submitting Request...";
+
+    });
+
+</script>
+
+</body>
+  </html>
