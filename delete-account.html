@@ -3,876 +3,382 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <meta
-        name="description"
-        content="Request deletion of your Wallpix Gallery account."
-    >
-
-    <meta name="theme-color" content="#000000">
-
-    <title>Wallpix Gallery | Delete Account</title>
+    <meta name="description" content="Submit a support request, report, or account deletion request for Wallpix Gallery by DevDrey Studios.">
+    <meta name="theme-color" content="#050506">
+    <title>Wallpix Gallery | Submit a Request</title>
 
     <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
+        :root {
+            --bg: #050506;
+            --bg-elev: #0d0e12;
+            --bg-elev-2: #12131a;
+            --border: rgba(255, 255, 255, 0.08);
+            --border-strong: rgba(255, 255, 255, 0.16);
+            --text: #f3f4f7;
+            --text-dim: #9aa1ad;
+            --text-faint: #666c77;
+            --blue: #2979ff;
+            --blue-dim: #6ba3ff;
+            --blue-soft: rgba(41, 121, 255, 0.12);
+            --blue-border: rgba(41, 121, 255, 0.26);
+            --red: #ff5c5c;
+            --red-soft: rgba(255, 92, 92, 0.1);
+            --red-border: rgba(255, 92, 92, 0.28);
+            --green: #3ddc84;
+            --r-lg: 20px;
+            --r-md: 14px;
+            --r-sm: 11px;
+            --max: 1050px;
+            --measure: 640px;
         }
 
-        html {
-            scroll-behavior: smooth;
-        }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        html { scroll-behavior: smooth; }
 
         body {
-            font-family:
-                -apple-system,
-                BlinkMacSystemFont,
-                "Segoe UI",
-                Roboto,
-                Helvetica,
-                Arial,
-                sans-serif;
-
-            background: #000000;
-            color: #ffffff;
-            line-height: 1.7;
-            min-height: 100vh;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            background: var(--bg);
+            color: var(--text);
+            line-height: 1.6;
+            -webkit-font-smoothing: antialiased;
         }
 
-        a {
-            color: inherit;
-            text-decoration: none;
+        a { color: inherit; text-decoration: none; }
+
+        :focus-visible {
+            outline: 2px solid var(--blue);
+            outline-offset: 3px;
+            border-radius: 4px;
         }
 
-        button,
-        input,
-        textarea {
-            font: inherit;
-        }
-
-        header {
-            position: sticky;
-            top: 0;
-            z-index: 100;
-
-            background: rgba(0, 0, 0, 0.86);
-
-            backdrop-filter: blur(18px);
-            -webkit-backdrop-filter: blur(18px);
-
-            border-bottom: 1px solid rgba(255, 255, 255, 0.07);
-        }
-
-        .nav {
-            max-width: 1050px;
-            margin: auto;
-
-            padding: 17px 24px;
-
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-
-            gap: 20px;
-        }
-
-        .brand {
-            display: flex;
-            align-items: center;
-            gap: 12px;
-        }
-
-        .brand-icon {
-            width: 40px;
-            height: 40px;
-
-            border-radius: 11px;
-
-            background: linear-gradient(
-                135deg,
-                #2979ff,
-                #1554c7
-            );
-
-            display: flex;
-            align-items: center;
-            justify-content: center;
-
-            font-weight: 800;
-
-            box-shadow:
-                0 8px 25px rgba(41, 121, 255, 0.22);
-        }
-
-        .brand-name {
-            font-weight: 700;
-            font-size: 14px;
-        }
-
-        .brand-company {
-            display: block;
-
-            color: #707681;
-
-            font-size: 10px;
-
-            margin-top: 1px;
-        }
-
-        .back {
-            color: #858b96;
-            font-size: 13px;
-
-            transition: color 0.2s ease;
-        }
-
-        .back:hover {
-            color: #ffffff;
-        }
-
-        .container {
-            max-width: 760px;
-
-            margin: auto;
-
-            padding: 75px 24px 90px;
-        }
+        .container { max-width: var(--measure); margin: auto; padding: 56px 24px 90px; }
 
         .hero {
             text-align: center;
-
-            margin-bottom: 45px;
+            margin-bottom: 36px;
+            opacity: 0;
+            transform: translateY(10px);
+            animation: rise 0.55s ease forwards;
         }
 
         .document-icon {
-            width: 58px;
-            height: 58px;
-
+            width: 56px;
+            height: 56px;
             margin: 0 auto 20px;
-
-            border-radius: 17px;
-
+            border-radius: 16px;
             display: flex;
             align-items: center;
             justify-content: center;
-
-            background: rgba(41, 121, 255, 0.12);
-
-            border: 1px solid rgba(41, 121, 255, 0.25);
-
-            color: #6da2ff;
-
-            font-size: 12px;
+            background: var(--blue-soft);
+            border: 1px solid var(--blue-border);
+            color: var(--blue-dim);
+            font-size: 13px;
             font-weight: 700;
         }
 
         .hero h1 {
-            font-size: clamp(34px, 7vw, 52px);
-
-            line-height: 1.05;
-
-            letter-spacing: -2px;
-
-            margin-bottom: 14px;
+            font-size: clamp(32px, 6.5vw, 46px);
+            line-height: 1.08;
+            letter-spacing: -1.6px;
+            margin-bottom: 12px;
+            text-wrap: balance;
         }
 
         .hero p {
-            max-width: 590px;
-
+            color: var(--text-dim);
+            font-size: 14.5px;
+            max-width: 480px;
             margin: auto;
-
-            color: #737984;
-
-            font-size: 14px;
         }
 
         .notice {
-            padding: 20px 22px;
+            padding: 16px 18px;
+            margin-bottom: 30px;
+            border-left: 3px solid var(--blue);
+            border-radius: 0 var(--r-md) var(--r-md) 0;
+            background: var(--blue-soft);
+            color: #b4bac4;
+            font-size: 13.5px;
+            opacity: 0;
+            transform: translateY(10px);
+            animation: rise 0.55s ease forwards;
+            animation-delay: 0.08s;
+            display: none;
+        }
 
-            margin-bottom: 28px;
+        .notice.show { display: block; }
 
-            border-left: 3px solid #2979ff;
-
-            border-radius: 0 13px 13px 0;
-
-            background: rgba(41, 121, 255, 0.06);
-
-            color: #9ba2ae;
-
-            font-size: 14px;
+        .notice.danger {
+            border-left-color: var(--red);
+            background: var(--red-soft);
         }
 
         .card {
-            background:
-                linear-gradient(
-                    145deg,
-                    rgba(18, 20, 25, 0.98),
-                    rgba(8, 9, 12, 0.98)
-                );
-
-            border: 1px solid rgba(255, 255, 255, 0.08);
-
-            border-radius: 20px;
-
             padding: 30px;
-
-            box-shadow:
-                0 20px 70px rgba(0, 0, 0, 0.35);
+            border-radius: var(--r-lg);
+            background: linear-gradient(155deg, var(--bg-elev-2), var(--bg-elev) 70%);
+            border: 1px solid var(--border);
+            opacity: 0;
+            transform: translateY(10px);
+            animation: rise 0.55s ease forwards;
+            animation-delay: 0.12s;
         }
 
-        .card h2 {
-            font-size: 21px;
+        .field { margin-bottom: 20px; }
 
-            letter-spacing: -0.5px;
-
-            margin-bottom: 8px;
-        }
-
-        .card-description {
-            color: #808691;
-
-            font-size: 13px;
-
-            margin-bottom: 27px;
-        }
-
-        .field {
-            margin-bottom: 21px;
-        }
-
-        .field label {
+        label {
             display: block;
-
-            color: #d8dce3;
-
             font-size: 13px;
-
             font-weight: 600;
-
             margin-bottom: 8px;
+            color: #dde0e5;
         }
 
-        .field input,
-        .field textarea {
+        .req { color: var(--blue-dim); }
+        .opt { color: var(--text-faint); font-weight: 400; }
+
+        input[type="text"],
+        input[type="email"],
+        select,
+        textarea {
             width: 100%;
-
             padding: 13px 14px;
+            border-radius: var(--r-sm);
+            border: 1px solid var(--border-strong);
+            background: var(--bg);
+            color: var(--text);
+            font-size: 14.5px;
+            font-family: inherit;
+            transition: border-color 0.2s ease, box-shadow 0.2s ease;
+        }
 
-            border-radius: 11px;
+        input::placeholder, textarea::placeholder { color: var(--text-faint); }
 
-            border: 1px solid rgba(255, 255, 255, 0.10);
-
+        input:focus, select:focus, textarea:focus {
             outline: none;
-
-            background: #08090c;
-
-            color: #ffffff;
-
-            font-size: 14px;
-
-            transition:
-                border-color 0.2s ease,
-                box-shadow 0.2s ease;
+            border-color: var(--blue);
+            box-shadow: 0 0 0 3px var(--blue-soft);
         }
 
-        .field input::placeholder,
-        .field textarea::placeholder {
-            color: #555b65;
-        }
-
-        .field input:focus,
-        .field textarea:focus {
-            border-color: rgba(41, 121, 255, 0.75);
-
-            box-shadow:
-                0 0 0 3px rgba(41, 121, 255, 0.10);
-        }
-
-        .field textarea {
-            min-height: 110px;
-
-            resize: vertical;
-        }
-
-        .checkbox-container {
-            display: flex;
-
-            align-items: flex-start;
-
-            gap: 11px;
-
-            margin: 25px 0;
-        }
-
-        .checkbox-container input {
-            width: 17px;
-            height: 17px;
-
-            margin-top: 3px;
-
-            accent-color: #2979ff;
-
-            flex-shrink: 0;
-        }
-
-        .checkbox-container label {
-            color: #858b96;
-
-            font-size: 12px;
-
-            line-height: 1.6;
-
+        select {
+            appearance: none;
+            -webkit-appearance: none;
+            background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%236ba3ff' stroke-width='2'%3E%3Cpath d='M6 9l6 6 6-6'/%3E%3C/svg%3E");
+            background-repeat: no-repeat;
+            background-position: right 14px center;
+            background-size: 18px;
+            padding-right: 40px;
             cursor: pointer;
         }
 
-        .checkbox-container a {
-            color: #5b9aff;
+        textarea { resize: vertical; min-height: 120px; }
+
+        .checkbox-row {
+            display: flex;
+            align-items: flex-start;
+            gap: 10px;
+            padding: 14px;
+            border-radius: var(--r-sm);
+            background: var(--bg-elev);
+            border: 1px solid var(--border);
         }
+
+        .checkbox-row input[type="checkbox"] {
+            margin-top: 2px;
+            width: 17px;
+            height: 17px;
+            accent-color: var(--blue);
+            flex-shrink: 0;
+            cursor: pointer;
+        }
+
+        .checkbox-row label {
+            margin: 0;
+            font-size: 13px;
+            font-weight: 400;
+            color: var(--text-dim);
+            cursor: pointer;
+        }
+
+        .checkbox-row a { color: var(--blue-dim); font-weight: 600; }
+        .checkbox-row a:hover { text-decoration: underline; }
 
         .submit-button {
             width: 100%;
-
+            margin-top: 22px;
+            padding: 15px;
             border: none;
-
-            border-radius: 12px;
-
-            padding: 14px 20px;
-
-            background: linear-gradient(
-                135deg,
-                #2979ff,
-                #1554c7
-            );
-
-            color: #ffffff;
-
-            font-size: 14px;
-
+            border-radius: var(--r-sm);
+            background: linear-gradient(135deg, var(--blue), #1554c7);
+            color: #fff;
+            font-size: 14.5px;
             font-weight: 700;
-
             cursor: pointer;
-
-            box-shadow:
-                0 10px 30px rgba(41, 121, 255, 0.20);
-
-            transition:
-                transform 0.2s ease,
-                box-shadow 0.2s ease,
-                opacity 0.2s ease;
+            transition: opacity 0.2s ease, transform 0.15s ease;
         }
 
-        .submit-button:hover {
-            transform: translateY(-2px);
+        .submit-button:hover { opacity: 0.92; }
+        .submit-button:active { transform: scale(0.99); }
+        .submit-button:disabled { opacity: 0.6; cursor: not-allowed; }
 
-            box-shadow:
-                0 14px 35px rgba(41, 121, 255, 0.30);
-        }
-
-        .submit-button:active {
-            transform: translateY(0);
-        }
-
-        .submit-button:disabled {
-            opacity: 0.55;
-
-            cursor: not-allowed;
-
-            transform: none;
-        }
+        .honeypot { position: absolute; left: -9999px; opacity: 0; height: 0; width: 0; }
 
         .security-note {
-            margin-top: 18px;
-
+            margin-top: 20px;
             text-align: center;
-
-            color: #555b65;
-
-            font-size: 11px;
-        }
-
-        .info-grid {
-            display: grid;
-
-            grid-template-columns: repeat(2, 1fr);
-
-            gap: 14px;
-
-            margin-top: 22px;
-        }
-
-        .info-box {
-            padding: 19px;
-
-            border-radius: 14px;
-
-            background: #090a0d;
-
-            border: 1px solid rgba(255, 255, 255, 0.07);
-        }
-
-        .info-box h3 {
-            font-size: 13px;
-
-            margin-bottom: 6px;
-        }
-
-        .info-box p {
-            color: #737984;
-
             font-size: 12px;
-
-            line-height: 1.6;
-        }
-
-        .success {
-            display: none;
-
-            margin-top: 22px;
-
-            padding: 18px 20px;
-
-            border-radius: 13px;
-
-            background: rgba(41, 121, 255, 0.08);
-
-            border: 1px solid rgba(41, 121, 255, 0.20);
-
-            color: #a7c4ff;
-
-            font-size: 13px;
-        }
-
-        .error {
-            display: none;
-
-            margin-top: 22px;
-
-            padding: 18px 20px;
-
-            border-radius: 13px;
-
-            background: rgba(255, 70, 70, 0.07);
-
-            border: 1px solid rgba(255, 70, 70, 0.18);
-
-            color: #ff9b9b;
-
-            font-size: 13px;
+            color: var(--text-faint);
         }
 
         .contact {
+            margin-top: 44px;
+            padding: 26px;
+            border-radius: var(--r-lg);
+            background: linear-gradient(145deg, var(--blue-soft), var(--bg-elev) 70%);
+            border: 1px solid var(--blue-border);
             text-align: center;
-
-            margin-top: 45px;
         }
 
-        .contact p {
-            color: #656b76;
+        .contact h2 { font-size: 18px; margin-bottom: 7px; }
+        .contact p { color: var(--text-dim); font-size: 13.5px; margin-bottom: 12px; }
+        .contact a { color: var(--blue-dim); font-size: 14px; font-weight: 600; }
+        .contact a:hover { text-decoration: underline; }
 
-            font-size: 12px;
-
-            margin-bottom: 8px;
-        }
-
-        .contact a {
-            color: #5b9aff;
-
-            font-size: 13px;
-
-            font-weight: 600;
-        }
-
-        footer {
-            border-top: 1px solid rgba(255, 255, 255, 0.07);
-
-            padding: 28px 24px;
-        }
+        footer { border-top: 1px solid var(--border); padding: 26px 24px; }
 
         .footer-inner {
-            max-width: 1050px;
-
+            max-width: var(--max);
             margin: auto;
-
             display: flex;
-
             justify-content: space-between;
-
             align-items: center;
-
             gap: 20px;
+            flex-wrap: wrap;
         }
 
-        .footer-copy {
-            color: #5f6570;
+        .footer-copy { color: var(--text-faint); font-size: 11px; }
 
-            font-size: 11px;
-        }
+        .footer-links { display: flex; gap: 18px; flex-wrap: wrap; }
+        .footer-links a { color: var(--text-dim); font-size: 11px; transition: color 0.2s ease; }
+        .footer-links a:hover { color: var(--text); }
 
-        .footer-links {
-            display: flex;
+        @keyframes rise { to { opacity: 1; transform: translateY(0); } }
 
-            gap: 18px;
-        }
-
-        .footer-links a {
-            color: #777d88;
-
-            font-size: 11px;
-
-            transition: color 0.2s ease;
-        }
-
-        .footer-links a:hover {
-            color: #ffffff;
-        }
-
-        @media (max-width: 650px) {
-
-            .nav {
-                padding: 14px 18px;
-            }
-
-            .back {
-                font-size: 12px;
-            }
-
-            .container {
-                padding: 55px 18px 70px;
-            }
-
-            .card {
-                padding: 22px;
-            }
-
-            .info-grid {
-                grid-template-columns: 1fr;
-            }
-
-            .footer-inner {
-                flex-direction: column;
-
-                text-align: center;
-            }
+        @media (max-width: 600px) {
+            .container { padding: 44px 18px 70px; }
+            .card { padding: 22px; }
+            .footer-inner { flex-direction: column; text-align: center; }
         }
     </style>
 </head>
 
 <body>
 
-<header>
-    <nav class="nav">
-
-        <a href="index.html" class="brand">
-
-            <div class="brand-icon">
-                W
-            </div>
-
-            <div>
-                <div class="brand-name">
-                    Wallpix Gallery
-                </div>
-
-                <span class="brand-company">
-                    DevDrey Studios
-                </span>
-            </div>
-
-        </a>
-
-        <a href="index.html" class="back">
-            Back to Legal Center
-        </a>
-
-    </nav>
-</header>
-
-
 <main class="container">
 
     <section class="hero">
-
-        <div class="document-icon">
-            DELETE
-        </div>
-
-        <h1>
-            Delete Your Account
-        </h1>
-
-        <p>
-            Submit a request to delete your Wallpix Gallery account
-            and associated account information.
-        </p>
-
+        <div class="document-icon">04</div>
+        <h1>Submit a Request</h1>
+        <p>Report a problem, request account deletion, or reach DevDrey Studios directly — choose a request type below.</p>
     </section>
 
-
-    <div class="notice">
-
-        <strong>Before continuing:</strong>
-        Account deletion is permanent. Once your request has been
-        processed, your Wallpix Gallery account and eligible associated
-        account data will be deleted and cannot be recovered.
-
+    <div class="notice danger" id="deletionNotice">
+        <strong>Account deletion is permanent.</strong> Once processed, your account, wallpaper favorites, and associated data cannot be recovered.
     </div>
-
 
     <div class="card">
+        <form id="requestForm" action="https://formsubmit.co/viralbit.zw@gmail" method="POST">
 
-        <h2>
-            Account Deletion Request
-        </h2>
-
-        <p class="card-description">
-            Enter the email address associated with your Wallpix Gallery
-            account. We may use this information to verify and process
-            your request.
-        </p>
-
-
-        <!--
-            IMPORTANT:
-
-            This form currently uses a placeholder action.
-
-            Replace the action URL with your actual secure backend,
-            Netlify Function, Formspree endpoint, or other form
-            processing service before publishing this page as a
-            functional deletion-request system.
-        -->
-
-        <form
-            id="deletionForm"
-            method="POST"
-            action="#"
-        >
+            <input type="hidden" name="_subject" value="Wallpix Gallery — New Request">
+            <input type="hidden" name="_template" value="table">
+            <input type="hidden" name="_captcha" value="false">
+            <input type="text" name="_honey" class="honeypot" tabindex="-1" autocomplete="off">
 
             <div class="field">
-
-                <label for="email">
-                    Account Email Address
-                </label>
-
-                <input
-                    type="email"
-                    id="email"
-                    name="email"
-                    placeholder="Enter your account email"
-                    autocomplete="email"
-                    required
-                >
-
+                <label for="requestType">Request Type <span class="req">*</span></label>
+                <select id="requestType" name="Request Type" required>
+                    <option value="" disabled selected>Select a request type</option>
+                    <option value="Account Deletion">Account Deletion</option>
+                    <option value="Report a Problem">Report a Problem</option>
+                    <option value="Report Content">Report Content</option>
+                    <option value="General Support">General Support</option>
+                    <option value="Other">Other</option>
+                </select>
             </div>
-
 
             <div class="field">
-
-                <label for="reason">
-                    Reason for Deletion
-                    <span style="color:#555b65; font-weight:400;">
-                        (Optional)
-                    </span>
-                </label>
-
-                <textarea
-                    id="reason"
-                    name="reason"
-                    placeholder="Tell us why you would like to delete your account."
-                ></textarea>
-
+                <label for="name">Your Name <span class="req">*</span></label>
+                <input type="text" id="name" name="Name" placeholder="Full name" required>
             </div>
 
+            <div class="field">
+                <label for="email">Account Email Address <span class="req">*</span></label>
+                <input type="email" id="email" name="Email" placeholder="you@example.com" required>
+            </div>
 
-            <div class="checkbox-container">
+            <div class="field">
+                <label for="message">Details <span class="req">*</span></label>
+                <textarea id="message" name="Details" placeholder="Describe your request. For account deletion, this confirms the account to remove. For reports, include as much detail as possible." required></textarea>
+            </div>
 
-                <input
-                    type="checkbox"
-                    id="confirmation"
-                    name="confirmation"
-                    required
-                >
-
+            <div class="checkbox-row">
+                <input type="checkbox" id="confirmation" name="Confirmation" value="Confirmed" required>
                 <label for="confirmation">
-
-                    I understand that deleting my Wallpix Gallery account
-                    is permanent and that my account information and other
-                    eligible associated data may be deleted and cannot be
-                    recovered.
-
-                    I have reviewed the
-                    <a href="privacy.html">
-                        Privacy Policy
-                    </a>.
-
+                    I confirm the information above is accurate and, if requesting account deletion, that I understand this action is permanent as described in the
+                    <a href="privacy.html">Privacy Policy</a>.
                 </label>
-
             </div>
 
-
-            <button
-                type="submit"
-                class="submit-button"
-                id="submitButton"
-            >
-                Submit Account Deletion Request
-            </button>
-
-
-            <div
-                class="success"
-                id="successMessage"
-            >
-                Your account deletion request has been submitted.
-                We will process the request according to our account
-                deletion procedures.
-            </div>
-
-
-            <div
-                class="error"
-                id="errorMessage"
-            >
-                We could not submit your request. Please try again or
-                contact DevDrey Studios directly using the email address
-                below.
-            </div>
-
+            <button type="submit" class="submit-button" id="submitButton">Submit Request</button>
         </form>
 
-
-        <div class="security-note">
-            Only submit a deletion request for an account that belongs to you.
-        </div>
-
+        <p class="security-note">Only submit a request for an account that belongs to you. Requests are reviewed by DevDrey Studios and typically processed within a few business days.</p>
     </div>
-
-
-    <div class="info-grid">
-
-        <div class="info-box">
-
-            <h3>
-                Account Information
-            </h3>
-
-            <p>
-                Your account information and eligible associated data
-                will be deleted when your request is processed.
-            </p>
-
-        </div>
-
-
-        <div class="info-box">
-
-            <h3>
-                Legal Retention
-            </h3>
-
-            <p>
-                Certain information may be retained where required
-                for legal, security, fraud-prevention, or other
-                legitimate purposes.
-            </p>
-
-        </div>
-
-    </div>
-
 
     <div class="contact">
-
-        <p>
-            Having trouble submitting a request?
-        </p>
-
-        <a href="mailto:viralbit.zw@gmail.com">
-            Contact viralbit.zw@gmail.com
-        </a>
-
+        <h2>Prefer Email?</h2>
+        <p>You can also reach DevDrey Studios directly</p>
+        <a href="mailto:viralbit.zw@gmail.com">viralbit.zw@gmail.com</a>
     </div>
 
 </main>
 
-
 <footer>
-
     <div class="footer-inner">
-
-        <div class="footer-copy">
-            © 2026 DevDrey Studios. All rights reserved.
-        </div>
-
-
+        <div class="footer-copy">&copy; 2026 DevDrey Studios. All rights reserved.</div>
         <div class="footer-links">
-
-            <a href="index.html">
-                Legal Center
-            </a>
-
-            <a href="privacy.html">
-                Privacy Policy
-            </a>
-
-            <a href="terms.html">
-                Terms of Service
-            </a>
-
+            <a href="index.html">Legal Center</a>
+            <a href="privacy.html">Privacy Policy</a>
+            <a href="terms.html">Terms of Service</a>
         </div>
-
     </div>
-
 </footer>
 
-
 <script>
+    (function () {
+        var typeSelect = document.getElementById('requestType');
+        var notice = document.getElementById('deletionNotice');
+        var form = document.getElementById('requestForm');
+        var submitButton = document.getElementById('submitButton');
 
-    const form = document.getElementById("deletionForm");
-
-    const submitButton =
-        document.getElementById("submitButton");
-
-    const successMessage =
-        document.getElementById("successMessage");
-
-    const errorMessage =
-        document.getElementById("errorMessage");
-
-
-    form.addEventListener("submit", function(event) {
-
-        /*
-         * The current form action is "#", so this prevents
-         * the browser from navigating away.
-         *
-         * Replace this with your real backend/form endpoint
-         * before using this as a live account-deletion system.
-         */
-
-        if (form.getAttribute("action") === "#") {
-
-            event.preventDefault();
-
-            errorMessage.style.display = "block";
-
-            errorMessage.textContent =
-                "The deletion request system has not been connected yet. " +
-                "Please contact DevDrey Studios at viralbit.zw@gmail.com.";
-
-            return;
+        function updateNotice() {
+            if (typeSelect.value === 'Account Deletion') {
+                notice.classList.add('show');
+            } else {
+                notice.classList.remove('show');
+            }
         }
 
+        typeSelect.addEventListener('change', updateNotice);
+        updateNotice();
 
-        submitButton.disabled = true;
-
-        submitButton.textContent =
-            "Submitting Request...";
-
-    });
-
+        form.addEventListener('submit', function () {
+            submitButton.disabled = true;
+            submitButton.textContent = 'Submitting Request...';
+        });
+    })();
 </script>
 
 </body>
-  </html>
+</html>
